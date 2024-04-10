@@ -29,12 +29,12 @@ class Player {
             this.top = 10;
         }
 
-        if(this.left > this.gameScreen.offsetWidth - this.left - 10) {
-            this.left = this.gameScreen.offsetWidth - this.left - 10;
+        if(this.left > this.gameScreen.offsetWidth - this.width - 10) {
+            this.left = this.gameScreen.offsetWidth - this.width - 10;
         }
 
-        if(this.top > this.gameScreen.offsetHeight - this.top - 10) {
-            this.top = this.gameScreen.offsetHeight - this.top - 10;
+        if(this.top > this.gameScreen.offsetHeight - this.height - 10) {
+            this.top = this.gameScreen.offsetHeight - this.height - 10;
         }
 
         this.updatePosition()

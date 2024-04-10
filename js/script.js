@@ -10,6 +10,17 @@ window.onload = function () {
   function startGame() {
     console.log("start game");
 
+
+  restartButton.addEventListener("click", function () {
+    restartGame();
+  });
+
+  function restartGame() {
+    location.reload();
+  }
+
+
+
     game = new Game();
     game.start();
   }
@@ -29,10 +40,10 @@ window.onload = function () {
 
       switch (key) {
         case "ArrowLeft":
-          game.player.directionX = -1;
+          game.player.directionX = -3;
           break;
         case "ArrowUp":
-          game.player.directionY = -1;
+          game.player.directionY = -3;
           break;
         case "ArrowRight":
           game.player.directionX = 1;
@@ -42,7 +53,16 @@ window.onload = function () {
           break;
       }
     }
+
+
+
   }
 
   window.addEventListener("keydown", handleKeydown);
+  window.addEventListener("keyup", () => {
+    game.player.directionX = 0;
+    game.player.directionY = 0;
+  }
+);
+
 };
